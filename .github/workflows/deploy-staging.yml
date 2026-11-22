@@ -12,7 +12,7 @@ on:
       ref:
         description: '검수할 브랜치(비우면 main)'
         required: false
-        default: 'main'
+        default: 'community-board'
 
 permissions:
   contents: read
@@ -30,7 +30,7 @@ jobs:
       - uses: actions/checkout@v4
         with:
           repository: bbobbo79sh-bot/artistcoach-site
-          ref: ${{ inputs.ref || 'main' }}
+          ref: ${{ inputs.ref || 'community-board' }}
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
